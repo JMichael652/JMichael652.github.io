@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<button href="http://createfoundation.com/make-a-donation/make-a-donation-form/?selectfund=OXFORD%20HIGH%20SCHOOL%20THEATRE%20ARTS%20GUILD">Donate</button>
+	<form action="http://createfoundation.com/make-a-donation/make-a-donation-form/?selectfund=OXFORD%20HIGH%20SCHOOL%20THEATRE%20ARTS%20GUILD">
+		<input type="submit" value="Donate" />
+	</form>
+	<br><br><br>
+	Literally all that says in the HTML is
+	<br>
+	<span id="text"></span>
+	
+	<script>
+		document.getElementById("text").textContent="<form action=\"http://createfoundation.com/make-a-donation/make-a-donation-form/?selectfund=OXFORD%20HIGH%20SCHOOL%20THEATRE%20ARTS%20GUILD\">\n\t<input type=\"submit\" value=\"Donate\" />\n</form>";
+	</script>
 </body>
 </html>
