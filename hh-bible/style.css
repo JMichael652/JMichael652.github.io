@@ -1,0 +1,79 @@
+html {
+	/* Image pulled from https://www.pinterest.com/pin/819303357182995198/ */
+	background-image: url("texture.jpg");
+	background-repeat: repeat;
+	font-family: Georgia, sans-serif;
+	font-size: 18px;
+}
+body {
+	width: 95%;
+	margin: 0 auto;
+}
+#logo-img {
+	text-align: center;
+	margin: 0 auto;
+}
+#logo-img img {
+	border: 3px solid black;
+	border-radius: 50%;
+	width: 200px;
+}
+header {
+	width: 95%;
+	margin: 0 auto;
+}
+#title {
+	margin: 20px auto;
+}
+h1, h2 {
+	text-align: center;
+	margin: 0 auto;
+}
+.chapter-header {
+	margin: 20px 0;
+}
+.chapter-header hr {
+	border-width: 3px;
+}
+.chapter-header .quote-pair {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 22px;
+	margin-top: -5px;
+	margin-bottom: -17px;
+}
+hr {
+	border-color: black;
+	border-width: 0.5px;
+}
+.quote-pair:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.quote-pair .reference {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 7px;
+}
+.quote-pair p {
+	width: 90%;
+	margin: 0 auto;
+	line-height: 1.3em;
+}
+.hh-quote, .bible-quote {
+	margin: 10px 0;
+	float: left;
+	width: 50%;
+}
+.bible-quote .chapter-link {
+	font-style: italic;
+	margin-top: 7px;
+}
+.exact-quote {
+	background-color: yellow;
+}
+footer {
+	text-align: right;
+}
