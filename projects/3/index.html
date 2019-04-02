@@ -44,5 +44,17 @@
 </div>
 <script src="/static/jquery-3.3.1.min.js"></script>
 <script src="/static/js/bootstrap.bundle.min.js"></script>
+<h2 class="display-4 font-weight-normal">Introduction</h2>
+RebuildGBA is a project that automates a common task for a CS 2261 TA: rebuilding a student's code with 1) the TA's Makefile, and 2) the student's code and Makefile SOURCES. Ordinarily, this involves a lot of manually copying files and copy-pasting lines from the Makefile.
+
+<h2 class="display-4 font-weight-normal">What it does</h2>
+
+<p class="lead font-weight-normal">The project does all of its work with a Bash script called "rebuild_gba.sh". The script does the following things:
+<ul>
+<li>Copies the entire project directory into a new directory with the prefix "_rebuild_" followed by the original name of the project.</li>
+<li>Copies the user's Makefile into the new directory, replacing the one that is already there.</li>
+<li>Replaces the SOURCES in the new Makefile with the SOURCES from the original Makefile.</li>
+<li>Rebuilds the new project directory with "make clean" and "make build".</li>
+</ul></p>
 </body>
 </html>
