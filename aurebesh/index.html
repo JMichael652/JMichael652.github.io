@@ -16,11 +16,15 @@
         font-size: 1.25em;
       }
     </style>
+    <script type="text/javascript" src="new_hope_script.js"></script>
   </head>
   <body>
     <div id="inputDiv">
       <textarea id="inputBox"></textarea>
       <button id="submitBtn" onclick="submitText()">Submit</button>
+    </div>
+    <div id="sampleDiv">
+      <button id="sampleNewHopeBtn" onclick="sampleNewHope()">New Hope Script</button>
     </div>
     <div id="outputDiv">
       <p id="outputText">
@@ -31,6 +35,9 @@
       function submitText() {
         var text = document.getElementById("inputBox").value;
         document.getElementById("outputText").innerText = text;
+      }
+      function sampleNewHope() {
+        document.getElementById("outputText").innerText = NEW_HOPE;
       }
     </script>
   </body>
