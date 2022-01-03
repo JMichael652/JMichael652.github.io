@@ -2,13 +2,36 @@
 <html>
   <head>
     <title>Aurebesh Translator</title>
+    <style>
+      @font-face {
+        font-family: "Aurebesh";
+        src: url(./Aurebesh.otf);
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      #outputDiv {
+        font-family: "Aurebesh";
+        font-size: 1.25em;
+      }
+    </style>
   </head>
   <body>
     <div id="inputDiv">
       <textarea id="inputBox"></textarea>
-      <button id="submitBtn">Submit</button>
+      <button id="submitBtn" onclick="submitText()">Submit</button>
     </div>
     <div id="outputDiv">
+      <p id="outputText">
+        Lorem Ipsum dolor sit amet
+      </p>    
     </div>
+    <script>
+      function submitText() {
+        var text = document.getElementById("inputBox").value;
+        document.getElementById("outputText").innerText = text;
+      }
+    </script>
   </body>
 </html>
