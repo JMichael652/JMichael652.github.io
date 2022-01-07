@@ -20,7 +20,7 @@
   </head>
   <body>
     <div id="inputDiv">
-      <textarea id="inputBox"></textarea>
+      <textarea id="inputBox">Lorem Ipsum dolor sit amet</textarea>
       <button id="submitBtn" onclick="submitText()">Submit</button>
     </div>
     <div id="sampleDiv">
@@ -32,12 +32,49 @@
       </p>    
     </div>
     <script>
+      function initialize() {
+        var text = window.localStorage.getItem("text");
+        if (text)
+        {
+          document.getElementById("inputBox").value = text;
+        }
+        var sample = window.localStorage.getItem("sample");
+        if (sample)
+        {
+          switch (sample) {
+            case "NEW_HOPE":
+              sampleNewHope();
+          }
+        } else if (text) {
+          submitText();
+        }
+        
+        var scroll = window.localStorage.getItem("scroll");
+        if (scroll)
+        {
+          scroll = parseFloat(scroll);
+        }
+        if (scroll)
+        {
+          window.scrollTo(window.scrollX, scroll);
+        }
+          
+        document.addEventListener("scroll", function (e) {
+          window.localStorage.setItem("scroll", window.scrollY);
+        });
+      }
+      initialize();
+      
       function submitText() {
         var text = document.getElementById("inputBox").value;
         document.getElementById("outputText").innerText = text;
+        window.localStorage.setItem("text", text);
+        window.localStorage.setItem("sample", "");
       }
       function sampleNewHope() {
         document.getElementById("outputText").innerText = NEW_HOPE;
+        window.localStorage.setItem("sample", "NEW_HOPE");
+        window.localStorage.setItem("text", "");
       }
     </script>
   </body>
